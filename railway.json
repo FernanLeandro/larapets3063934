@@ -1,9 +1,0 @@
-{
-  "build": {
-    "builder": "heroku/buildpacks:20",
-    "buildCommand": "composer install --no-dev --optimize-autoloader && npm install && npm run build"
-  },
-  "deploy": {
-    "startCommand": "php artisan migrate --force && vendor/bin/heroku-php-nginx public/"
-  }
-}
